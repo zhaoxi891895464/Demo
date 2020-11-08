@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="main" v-cloak>
+        <div id="context">
+            <div id="show">
+                <div id="expression">
+                    {{ previous }}
+                </div>
+                <div id="answer">
+                    {{ currentValue }}
+                </div>
+            </div>
+            <div id="keys">
+                <ul>
+                    <button @click="clear">C</button>
+                    <button @click="sign">+/-</button>
+                    <button @click="percent">%</button>
+                    <button @click="del">del</button>
+                    <button @click="append('7')">7</button>
+                    <button @click="append('8')">8</button>
+                    <button @click="append('9')">9</button>
+                    <button @click="add">+</button>
+                    <button @click="append('4')">4</button>
+                    <button @click="append('5')">5</button>
+                    <button @click="append('6')">6</button>
+                    <button @click="subtract">-</button>
+                    <button @click="append('1')">1</button>
+                    <button @click="append('2')">2</button>
+                    <button @click="append('3')">3</button>
+                    <button @click="multiply">*</button>
+                    <button @click="append('0')">0</button>
+                    <button @click="dot">.</button>
+                    <button @click="equal">=</button>
+                    <button @click="divide">/</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
